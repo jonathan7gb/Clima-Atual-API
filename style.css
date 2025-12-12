@@ -10,3 +10,41 @@
 #cardClima.noite{
     background-color: oklch(12.9% 0.042 264.695);
 }
+
+#header{
+    background-color: oklch(68.5% 0.169 237.323);
+    color: white ;
+}
+
+#header.dia{
+    background-color: oklch(68.5% 0.169 237.323);
+}
+
+#header.noite{
+    background-color: oklch(12.9% 0.042 264.695);
+}
+
+#botaoSubmit{
+    background-color: oklch(68.5% 0.169 237.323);
+    color: white ;
+}
+
+#botaoSubmit.dia{
+    background-color: oklch(68.5% 0.169 237.323);
+}
+
+#botaoSubmit.noite{
+    background-color: oklch(12.9% 0.042 264.695);
+}
+
+#tituloPesquisa{
+    color: oklch(68.5% 0.169 237.323) ;
+}
+
+#tituloPesquisa.dia{
+    color: oklch(68.5% 0.169 237.323);
+}
+
+#tituloPesquisa.noite{
+    color: oklch(12.9% 0.042 264.695) ;
+}

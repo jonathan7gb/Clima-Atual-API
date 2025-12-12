@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- HEADER DO SITE -->
-    <header class="p-8 bg-sky-500 text-white text-center">
+    <header class="p-8 bg-sky-500 text-white text-center" id="header">
         <div>
             <h1 class="text-white font-bold text-3xl flex items-center justify-center gap-4">
                 UBER'S WHEATER APP
@@ -21,19 +21,20 @@
     <main class="flex flex-col justify-self-center justify-center items-center mt-8 lg:min-w-[1000px] lg:mx-[4rem] sm:mx-[1rem] sm:max-w-xs">
         <!-- SEÇÃO PARA PESQUISA DA CIDADE -->
         <section class="w-full">
+            <h1 class="mb-2 text-sky-500 font-bold text-xl" id="tituloPesquisa">Pesquisar Cidade</h1>
             <form action="" class="w-full flex flex-row gap-2 justify-between">
                 <input type="text" id="cidadeInput" placeholder="Digite o nome da cidade" class="w-full border p-2 rounded">
-                <button type="submit" class="bg-sky-500 text-white font-semibold p-2 rounded hover:bg-sky-600">Pesquisar</button>
+                <button type="submit" class="bg-sky-500 text-white font-semibold p-2 rounded hover:bg-sky-600" id="botaoSubmit">Pesquisar</button>
             </form>
         </section>
 
         <!-- SEÇÃO ONDE MOSTRA OS DETALHES DA CIDADE -->
         <section class="mt-4 w-full">
             <div class="p-4 border rounded-xl flex flex-col  gap-4 cardClima" id="cardClima">
-                <div id="iconeDia" class="text-yellow-400">
+                <div id="iconeDia" class="text-yellow-400 flex flex-row gap-2">
                     
                 </div>
-                <h2 class="text-2xl font-bold text-white justify-center"><span  id="nomeCidade">Jaraguá do Sul</span> (<span id="horario"></span>)</h2>
+                <h2 class="text-2xl font-bold text-white justify-center"><span  id="nomeCidade">Jaraguá do Sul</span>, <span id="paisCidade"></span> (<span id="horario"></span>)</h2>
                 <h3 class="text-5xl font-bold text-white justify-center"><span id="temperaturaCidade">0</span> ºC</h3>
                 <div class="bg-amber-300 p-2 text-black rounded-xl">
                     <p class="font-semibold w-full" id="mensagemEspecial"></p>
