@@ -4,8 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Previsão do Tempo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- HEADER DO SITE -->
+    <header class="p-8 bg-sky-500 text-white text-center">
+        <div>
+            <h1 class="text-white font-bold text-3xl flex items-center justify-center gap-4">
+                UBER'S WHEATER APP
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloudy-icon lucide-cloudy text-yellow-400"><path d="M17.5 21H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/><path d="M22 10a3 3 0 0 0-3-3h-2.207a5.502 5.502 0 0 0-10.702.5"/></svg>
+            </h1>
+        </div>    
+    </header>
+
+    <main class="flex flex-col justify-self-center justify-center items-center mt-8 lg:min-w-[1000px] lg:mx-[4rem] sm:mx-[1rem] sm:max-w-xs">
+        <!-- SEÇÃO PARA PESQUISA DA CIDADE -->
+        <section class="w-full">
+            <form action="" class="w-full flex flex-row gap-2 justify-between">
+                <input type="text" id="cidadeInput" placeholder="Digite o nome da cidade" class="w-full border p-2 rounded">
+                <button type="submit" class="bg-sky-500 text-white font-semibold p-2 rounded hover:bg-sky-600">Pesquisar</button>
+            </form>
+        </section>
+
+        <!-- SEÇÃO ONDE MOSTRA OS DETALHES DA CIDADE -->
+        <section class="mt-4 w-full">
+            <div class="p-4 border rounded-xl flex flex-col  gap-4 cardClima" id="cardClima">
+                <div id="iconeDia" class="text-yellow-400">
+                    
+                </div>
+                <h2 class="text-2xl font-bold text-white justify-center"><span  id="nomeCidade">Jaraguá do Sul</span> (<span id="horario"></span>)</h2>
+                <h3 class="text-5xl font-bold text-white justify-center"><span id="temperaturaCidade">0</span> ºC</h3>
+                <div class="bg-amber-300 p-2 text-black rounded-xl">
+                    <p class="font-semibold w-full" id="mensagemEspecial"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
 </body>
 </html>

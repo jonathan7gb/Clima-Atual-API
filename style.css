@@ -1,0 +1,12 @@
+#cardClima{
+    background-color: oklch(68.5% 0.169 237.323);
+    color: white ;
+}
+
+#cardClima.dia{
+    background-color: oklch(68.5% 0.169 237.323);
+}
+
+#cardClima.noite{
+    background-color: oklch(12.9% 0.042 264.695);
+}
