@@ -5,6 +5,7 @@ const urlPadrao = `https://api.openweathermap.org/data/2.5/weather?q=${cidadePad
 const nomeCidade = document.getElementById("nomeCidade");
 const paisCidade = document.getElementById("paisCidade");
 const temperaturaCidade = document.getElementById("temperaturaCidade");
+const sensacaoTermica = document.getElementById("sensacaoTermica");
 const cardClima = document.getElementById("cardClima");
 const inputCidade = document.getElementById("cidadeInput");
 const iconeDia = document.getElementById("iconeDia");
@@ -25,6 +26,7 @@ function atualizarClima(url) {
         nomeCidade.innerText = data.name;
         paisCidade.innerText = data.sys.country;
         temperaturaCidade.innerText = data.main.temp;
+        sensacaoTermica.innerText = data.main.feels_like;
         const horaLocal = new Date((data.dt + data.timezone) * 1000); 
 
         const horas = horaLocal.getUTCHours();
