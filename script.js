@@ -16,6 +16,7 @@ const botaoSubmit = document.getElementById("botaoSubmit");
 const tituloPesquisa = document.getElementById("tituloPesquisa");
 const mensagemEspecial = document.getElementById("mensagemEspecial");
 const pesquisa = document.querySelector("form");
+const proximoDia = document.querySelectorAll(".proximoDia")
 
 function atualizarClima(url) {
   fetch(url)
@@ -82,6 +83,11 @@ function atualizarClima(url) {
 
         tituloPesquisa.classList.remove("dia", "noite");
         tituloPesquisa.classList.add(classePeriodo);
+
+        proximoDia.forEach(element => {    
+          element.classList.remove("dia", "noite");
+          element.classList.add(classePeriodo);
+        });
 
         mensagemEspecial.innerText = mensagem;
     })

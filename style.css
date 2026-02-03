@@ -60,3 +60,11 @@
 #tituloPesquisa.noite{
     color: white ;
 }
+
+.proximoDia.dia{
+    background-color: oklch(80.9% 0.105 251.813);
+}
+
+.proximoDia.noite{
+    background-color: oklch(55.2% 0.016 285.938);
+}
