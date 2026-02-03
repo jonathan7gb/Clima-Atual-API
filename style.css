@@ -1,23 +1,35 @@
+#body{
+    background-color: oklch(70.7% 0.165 254.624);
+}
+
+#body.dia{
+    background-color: oklch(70.7% 0.165 254.624);
+}
+
+#body.noite{
+    background-color: oklch(12.9% 0.042 264.695)
+}
+
 #cardClima{
-    background-color: oklch(68.5% 0.169 237.323);
+    background-color: oklch(80.9% 0.105 251.813);
     color: white ;
 }
 
 #cardClima.dia{
-    background-color: oklch(68.5% 0.169 237.323);
+    background-color: oklch(80.9% 0.105 251.813);
 }
 
 #cardClima.noite{
-    background-color: oklch(12.9% 0.042 264.695);
+    background-color: oklch(55.2% 0.016 285.938);
 }
 
 #header{
-    background-color: oklch(68.5% 0.169 237.323);
+    background-color: oklch(70.7% 0.165 254.624);
     color: white ;
 }
 
 #header.dia{
-    background-color: oklch(68.5% 0.169 237.323);
+    background-color: oklch(70.7% 0.165 254.624);
 }
 
 #header.noite{
@@ -25,26 +37,26 @@
 }
 
 #botaoSubmit{
-    background-color: oklch(68.5% 0.169 237.323);
+    background-color: oklch(80.9% 0.105 251.813);
     color: white ;
 }
 
 #botaoSubmit.dia{
-    background-color: oklch(68.5% 0.169 237.323);
+    background-color: oklch(80.9% 0.105 251.813);
 }
 
 #botaoSubmit.noite{
-    background-color: oklch(12.9% 0.042 264.695);
+    background-color: oklch(55.2% 0.016 285.938);
 }
 
 #tituloPesquisa{
-    color: oklch(68.5% 0.169 237.323) ;
+    color: white ;
 }
 
 #tituloPesquisa.dia{
-    color: oklch(68.5% 0.169 237.323);
+    color: white;
 }
 
 #tituloPesquisa.noite{
-    color: oklch(12.9% 0.042 264.695) ;
+    color: white ;
 }

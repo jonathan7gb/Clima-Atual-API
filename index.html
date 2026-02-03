@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="body">
     <!-- HEADER DO SITE -->
     <header class="p-8 bg-sky-500 text-white text-center" id="header">
         <div>
@@ -30,12 +30,12 @@
 
         <!-- SEÇÃO ONDE MOSTRA OS DETALHES DO CLIMA DA CIDADE -->
         <section class="mt-4 w-full">
-            <div class="p-4 border rounded-xl flex flex-col  gap-4 cardClima" id="cardClima">
-                <div id="iconeDia" class="text-yellow-400 flex flex-row gap-2">
+            <div class="p-4 rounded-xl flex flex-col  gap-3 cardClima" id="cardClima">
+                <div id="iconeDia" class="text-yellow-400 flex flex-row gap-2 ">
                     
                 </div>
-                <h2 class="text-2xl font-bold text-white justify-center"><span  id="nomeCidade">Jaraguá do Sul</span>, <span id="paisCidade"></span> (<span id="horario"></span>)</h2>
-                <h3 class="text-5xl font-bold text-white justify-center"><span id="temperaturaCidade">0</span> ºC</h3>
+                <h2 class="text-2xl font-semibold text-white justify-center"><span  id="nomeCidade">Jaraguá do Sul</span>, <span id="paisCidade"></span> (<span id="horario"></span>)</h2>
+                <h3 class="text-6xl font-bold text-white justify-center"><span id="temperaturaCidade">0</span> ºC</h3>
                 <p>Sensação térmica de <span id="sensacaoTermica"></span> ºC</p>
                 <div class="bg-amber-300 p-2 text-black rounded-xl">
                     <p class="font-semibold w-full" id="mensagemEspecial"></p>
