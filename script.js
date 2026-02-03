@@ -88,6 +88,18 @@ function atualizarClima(url) {
     .catch((error) => console.error("Erro:", error));
 }
 
+function mostrarProximosDias(){
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) throw new Error("Cidade não encontrada");
+      return response.json();
+    })
+    .then((data) => {
+        
+    })
+    .catch((error) => console.error("Erro:", error));
+}
+
 window.addEventListener("load", () => {
   atualizarClima(urlPadrao);
 });
