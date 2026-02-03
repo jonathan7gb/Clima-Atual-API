@@ -6,6 +6,7 @@
     <title>Previsão do Tempo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./iconnuvem.png">
 </head>
 <body id="body">
     <!-- HEADER DO SITE -->
@@ -18,7 +19,7 @@
         </div>    
     </header>
 
-    <main class="flex flex-col justify-self-center justify-center items-center mt-8 lg:min-w-[800px] lg:mx-[4rem] md:mx-[2rem] md:min-w-[700px] sm:mx-[1rem] sm:max-w-sm">
+    <main class="flex flex-col justify-self-center justify-center items-center mt-8 lg:min-w-[850px] lg:mx-[4rem] md:mx-[2rem] md:min-w-[700px] sm:mx-[1rem] sm:max-w-sm">
         <!-- SEÇÃO PARA PESQUISA DA CIDADE -->
         <section class="w-full">
             <h1 class="mb-2 font-bold text-xl" id="tituloPesquisa">Pesquisar Cidade</h1>
@@ -46,58 +47,7 @@
         <!-- SEÇÃO ONDE MOSTRA CLIMA NOS PRÓXIMOS DIAS -->
         <section class="w-full mt-2">
             <h1 class="text-xl text-white font-bold mt-4 mb-2">Próximos 5 dias:</h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-
-
-                <div class="p-4 rounded text-center proximoDia flex justify-center flex-col gap-4">
-                    <p class="text-white font-medium"><span>Qua.</span></p>
-                     <div id="iconClima" class="justify-center flex items-center flex-col"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="oklch(85.2% 0.199 91.936)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></div>
-                     <div class="flex flex-row justify-center gap-2 items-end">
-                         <p class="font-medium text-white text-xl"><span>25</span>°C</p>
-                        <p class="text-stone-200 text-md"><span>12</span>°C</p>
-                        
-                     </div>   
-                </div>
-                <div class="p-4 rounded text-center proximoDia flex justify-center flex-col gap-4">
-                    <p class="text-white font-medium"><span>Qui.</span></p>
-                     <div id="iconClima" class="justify-center flex items-center flex-col"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="oklch(85.2% 0.199 91.936)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></div>
-                     <div class="flex flex-row justify-center gap-2 items-end">
-                         <p class="font-medium text-white text-xl"><span>25</span>°C</p>
-                        <p class="text-stone-200 text-md"><span>12</span>°C</p>
-                        
-                     </div>   
-                </div>
-                <div class="p-4 rounded text-center proximoDia flex justify-center flex-col gap-4">
-                    <p class="text-white font-medium"><span>Sex.</span></p>
-                     <div id="iconClima" class="justify-center flex items-center flex-col"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="oklch(85.2% 0.199 91.936)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></div>
-                     <div class="flex flex-row justify-center gap-2 items-end">
-                         <p class="font-medium text-white text-xl"><span>25</span>°C</p>
-                        <p class="text-stone-200 text-md"><span>12</span>°C</p>
-                        
-                     </div>   
-                </div>
-                <div class="p-4 rounded text-center proximoDia flex justify-center flex-col gap-4">
-                    <p class="text-white font-medium"><span>Sab.</span></p>
-                     <div id="iconClima" class="justify-center flex items-center flex-col"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="oklch(85.2% 0.199 91.936)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></div>
-                     <div class="flex flex-row justify-center gap-2 items-end">
-                         <p class="font-medium text-white text-xl"><span>25</span>°C</p>
-                        <p class="text-stone-200 text-md"><span>12</span>°C</p>
-                        
-                     </div>   
-                </div>
-                <div class="p-4 rounded text-center proximoDia flex justify-center flex-col gap-4">
-                    <p class="text-white font-medium"><span>Dom.</span></p>
-                     <div id="iconClima" class="justify-center flex items-center flex-col"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="oklch(85.2% 0.199 91.936)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></div>
-                     <div class="flex flex-row justify-center gap-2 items-end">
-                         <p class="font-medium text-white text-xl"><span>25</span>°C</p>
-                        <p class="text-stone-200 text-md"><span>12</span>°C</p>
-                        
-                     </div>   
-                </div>
-               
-
-
-
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4" id="listaProximos5Dias">
 
             </div>
         </section>

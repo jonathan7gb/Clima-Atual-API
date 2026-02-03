@@ -16,7 +16,6 @@ const botaoSubmit = document.getElementById("botaoSubmit");
 const tituloPesquisa = document.getElementById("tituloPesquisa");
 const mensagemEspecial = document.getElementById("mensagemEspecial");
 const pesquisa = document.querySelector("form");
-const proximoDia = document.querySelectorAll(".proximoDia")
 
 function atualizarClima(url) {
   fetch(url)
@@ -51,6 +50,7 @@ function atualizarClima(url) {
 
         let iconeBase = ehDia ? iconDia : iconNoite;
         let classePeriodo = ehDia ? "dia" : "noite";
+        let classePeriodo2 = ehDia ? "dia1" : "noite1";
         let mensagem = ehDia ? "Aproveite seu Dia!" : "Boa noite! Tenha uma ótima noite de sono.";
 
         let estaChovendo = false;
@@ -81,26 +81,55 @@ function atualizarClima(url) {
         botaoSubmit.classList.remove("dia", "noite");
         botaoSubmit.classList.add(classePeriodo);
 
-        tituloPesquisa.classList.remove("dia", "noite");
-        tituloPesquisa.classList.add(classePeriodo);
-
-        proximoDia.forEach(element => {    
-          element.classList.remove("dia", "noite");
-          element.classList.add(classePeriodo);
-        });
+        tituloPesquisa.classList.remove("dia1", "noite1");
+        tituloPesquisa.classList.add(classePeriodo2);
 
         mensagemEspecial.innerText = mensagem;
     })
     .catch((error) => console.error("Erro:", error));
 }
 
-function mostrarProximosDias(){
-  fetch(url)
+const lista5Dias = document.getElementById('listaProximos5Dias');
+const urlForecastPadrao = `https://api.openweathermap.org/data/2.5/forecast?q=${cidadePadrao}&appid=${apiKey}&units=metric&lang=pt_br`
+function mostrarProximosDias(urlForecastPadrao){
+  fetch(urlForecastPadrao)
     .then((response) => {
       if (!response.ok) throw new Error("Cidade não encontrada");
       return response.json();
     })
     .then((data) => {
+      lista5Dias.innerHTML = "";
+      
+      const diasFiltrados = data.list.filter(item => item.dt_txt.includes("12:00:00"));
+      const temaAtual = document.body.classList.contains("dia") ? "dia" : "noite";
+    
+      diasFiltrados.forEach(proximosDias => {
+        const dateObj = new Date(proximosDias.dt * 1000); 
+        const diaTexto = dateObj.toLocaleDateString('pt-BR', { weekday: 'short', day: 'numeric' });
+
+        let tempMax = proximosDias.main.temp_max
+        let climaCode = proximosDias.weather[0].id
+        let emojiClima = ""
+        
+
+        if(climaCode > 800){
+          emojiClima = '<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="oklch(85.2% 0.199 91.936)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>'
+        }else{
+          emojiClima =  '<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud-rain-wind-icon lucide-cloud-rain-wind"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="m9.2 22 3-7"/><path d="m9 13-3 7"/><path d="m17 13-3 7"/></svg>';
+        }
+        let novoDiaClima = document.createElement('div')
+        novoDiaClima.innerHTML = `
+        <div class="px-6 py-4 rounded text-center proximoDia flex justify-center flex-col gap-2 ${temaAtual}">
+        <p class="text-white font-semibold text-lg">${diaTexto}</p>
+        <div id="iconClima" class="justify-center flex items-center flex-col">${emojiClima}</div>
+        <div class="flex flex-row justify-center gap-2 items-end">
+        <p class="font-medium text-white text-xl"><span>${tempMax.toFixed(0)}</span>°C</p>
+        
+        </div>   
+        </div>
+        `
+        lista5Dias.appendChild(novoDiaClima);
+      })
         
     })
     .catch((error) => console.error("Erro:", error));
@@ -108,6 +137,7 @@ function mostrarProximosDias(){
 
 window.addEventListener("load", () => {
   atualizarClima(urlPadrao);
+  mostrarProximosDias(urlForecastPadrao)
 });
 
 pesquisa.addEventListener("submit", (e) => {
@@ -121,6 +151,7 @@ pesquisa.addEventListener("submit", (e) => {
   }
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(cidade)}&appid=${apiKey}&units=metric&lang=pt_br`;
-
   atualizarClima(url);
+  const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${encodeURIComponent(cidade)}&appid=${apiKey}&units=metric&lang=pt_br`
+  mostrarProximosDias(urlForecast)
 });

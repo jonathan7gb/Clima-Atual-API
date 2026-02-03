@@ -53,18 +53,17 @@
     color: white ;
 }
 
-#tituloPesquisa.dia{
+#tituloPesquisa.dia1{
     color: white;
 }
 
-#tituloPesquisa.noite{
+#tituloPesquisa.noite1{
     color: white ;
 }
 
-.proximoDia.dia{
+.dia{
     background-color: oklch(80.9% 0.105 251.813);
 }
-
-.proximoDia.noite{
+.noite{
     background-color: oklch(55.2% 0.016 285.938);
 }
